@@ -1,10 +1,9 @@
-var access_key = config.ACCESS_KEY;
-
-
+const access_key = config.ACCESS_KEY;
 const API_URL = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=`;
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const loadingImage = document.querySelector('#loadingImage');
+const imageSection = document.querySelector('.images');
 
 loadingImage.style.display = 'none';
 
@@ -28,8 +27,11 @@ function search(searchTerm) {
 }
 
 function displayImages(images) {
-  images.forEach((image) => {
-    console.log(image.urls.regular);
+  images.forEach(image => {
+    // console.log(image.urls.regular);
+    const imageElement = document.createElement('img');
+    imageElement.src = image.urls.regular;
+    imageSection.appendChild(imageElement);
   })
 }
 
