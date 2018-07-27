@@ -3,6 +3,10 @@ body {
   margin: 2em auto 0 auto;
 }
 
+.images {
+  column-count: 3;
+}
+
 img {
   width: 100%;
 }
