@@ -32,6 +32,7 @@ function displayImages(images) {
     const imageElement = document.createElement('img');
     imageElement.src = image.urls.regular;
     imageSection.appendChild(imageElement);
-  })
+  });
+  loadingImage.style.display = 'none';
 }
 
